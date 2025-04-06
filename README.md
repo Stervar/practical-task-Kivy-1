@@ -1,4 +1,5 @@
-pip install buildozer
+
+"pip install buildozer"
 
 buildozer init
 
