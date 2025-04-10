@@ -7,6 +7,7 @@ buildozer init
 
 Правильное название приложения: title = Kivy Image Viewer
 Корректное имя пакета: package.name = kivyimageviewer
+
 Домен пакета: package.domain = org.kivy
 Требования: requirements = python3,kivy,pillow
 Разрешения: android.permissions = android.permission.READ_EXTERNAL_STORAGE
