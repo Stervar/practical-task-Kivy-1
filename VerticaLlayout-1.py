@@ -31,3 +31,18 @@ class VBoxLayoutExample(App):
 
 if __name__ == "__main__":
     VBoxLayoutExample().run()
+
+
+
+
+# padding: Отступ padding между лейаутом и его дочерними элементами уточняется в пикселях. Для этого можно выбрать один из трех способов:
+    
+# Список из четырех аргументов: [padding_left, padding_top, padding_right, padding_bottom]
+
+# Список из двух аргументов: [padding_horizontal, padding_vertical]
+
+# Один аргумент: padding=10
+
+# spacing: При помощи данного аргумента добавляется расстояние между дочерними виджетами.
+
+# orientation: Позволяет изменить значение orientation для BoxLayout по умолчанию — с горизонтального на вертикальное.

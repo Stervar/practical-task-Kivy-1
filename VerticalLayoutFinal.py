@@ -3,15 +3,15 @@ from kivy.app import App
 from kivy.uix.button import Button
 from kivy.uix.boxlayout import BoxLayout
 
-# Цвета в формате RGBA
-red = [1, 0, 0, 1]      # Красный
-green = [0, 1, 0, 1]    # Зеленый
-blue = [0, 0, 1, 1]     # Синий
-purple = [1, 0, 1, 1]   # Фиолетовый
+
+red = [1, 0, 0, 1]      
+green = [0, 1, 0, 1]   
+blue = [0, 0, 1, 1]     
+purple = [1, 0, 1, 1]
 
 class VBoxLayoutExample(App):
     def build(self):
-        # Создаем вертикальный layout с отступами:
+ 
         # padding=[слева, сверху, справа, снизу]
         layout = BoxLayout(
             orientation='vertical',
@@ -33,3 +33,23 @@ class VBoxLayoutExample(App):
 
 if __name__ == "__main__":
     VBoxLayoutExample().run()
+
+
+
+
+
+
+
+
+
+# padding: Отступ padding между лейаутом и его дочерними элементами уточняется в пикселях. Для этого можно выбрать один из трех способов:
+    
+# Список из четырех аргументов: [padding_left, padding_top, padding_right, padding_bottom]
+
+# Список из двух аргументов: [padding_horizontal, padding_vertical]
+
+# Один аргумент: padding=10
+
+# spacing: При помощи данного аргумента добавляется расстояние между дочерними виджетами.
+
+# orientation: Позволяет изменить значение orientation для BoxLayout по умолчанию — с горизонтального на вертикальное.
