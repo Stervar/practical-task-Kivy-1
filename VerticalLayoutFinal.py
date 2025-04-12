@@ -4,14 +4,14 @@ from kivy.uix.button import Button
 from kivy.uix.boxlayout import BoxLayout
 
 
-red = [1, 0, 0, 1]      
-green = [0, 1, 0, 1]   
-blue = [0, 0, 1, 1]     
-purple = [1, 0, 1, 1]
-
 class VBoxLayoutExample(App):
+    # Color definitions
+    red = [1, 0, 0, 1]      
+    green = [0, 1, 0, 1]   
+    blue = [0, 0, 1, 1]     
+    purple = [1, 0, 1, 1]
+
     def build(self):
- 
         # padding=[слева, сверху, справа, снизу]
         layout = BoxLayout(
             orientation='vertical',
@@ -19,7 +19,7 @@ class VBoxLayoutExample(App):
             spacing=20                  # Расстояние между кнопками
         )
 
-        colors = [red, green, blue, purple]
+        colors = [self.red, self.green, self.blue, self.purple]
 
         for i, color in enumerate(colors):
             btn = Button(
@@ -27,29 +27,15 @@ class VBoxLayoutExample(App):
                 background_color=color,
                 size_hint=(1, 0.2)  # Ширина 100%, высота 20% от layout
             )
+           
+            btn.bind(on_press=self.on_press_button)
             layout.add_widget(btn)
 
         return layout
+ 
+    def on_press_button(self, instance):
+        print('Вы нажали на кнопку!')
+
 
 if __name__ == "__main__":
     VBoxLayoutExample().run()
-
-
-
-
-
-
-
-
-
-# padding: Отступ padding между лейаутом и его дочерними элементами уточняется в пикселях. Для этого можно выбрать один из трех способов:
-    
-# Список из четырех аргументов: [padding_left, padding_top, padding_right, padding_bottom]
-
-# Список из двух аргументов: [padding_horizontal, padding_vertical]
-
-# Один аргумент: padding=10
-
-# spacing: При помощи данного аргумента добавляется расстояние между дочерними виджетами.
-
-# orientation: Позволяет изменить значение orientation для BoxLayout по умолчанию — с горизонтального на вертикальное.
