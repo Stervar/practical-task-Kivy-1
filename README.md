@@ -64,3 +64,4 @@ docker run -it --rm -v "%cd%":/home/user/hostcwd kivy/buildozer android debug
 Ручная сборка через python-for-android:
 
 p4a apk --requirements=python3,kivy,pillow --private . --package=org.kivy.kivyimageviewer --name "Kivy  Image Viewer"I
+
